@@ -5,3 +5,29 @@
   border-style: dashed;
   border-width: 0.01rem;
 }
+
+
+#navbar{
+  position: fixed;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  background: cornflowerblue;
+}
+
+#navbar a{
+  color: black;
+  margin: 0 5vw;
+  width: auto;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+section{
+  padding: 60px 2vw;
+  height: 100vh;
+}
