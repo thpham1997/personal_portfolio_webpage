@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-style: dashed;
-  border-width: 0.01rem;
+  /* border-style: dashed;
+  border-width: 0.01rem; */
 }
 
 
@@ -20,11 +20,22 @@
 #navbar a{
   color: black;
   margin: 0 5vw;
-  width: auto;
+  padding: 5px 0;
+  width: 80px;
+  height: 30px;
   text-decoration: none;
   font-size: large;
   font-weight: bold;
   text-align: center;
+}
+#navbar a:hover{
+  text-align: center;
+  padding: 5px 0;
+  width: 80px;
+  height: 30px;
+  cursor: none;
+  color: #ffffff;
+  background: #5B84B1FF;
 }
 
 section{
@@ -59,27 +70,33 @@ section{
   text-underline-offset: 10px;
 }
 
-#project-section{
+#projects
+{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
-  background: rgb(69, 39, 161);
+  background: #5B84B1FF;
   padding-left: 2vw;
   padding-right: 2vw;
 }
-#project-section h1{
+#projects h1{
   max-width: 600px;
   min-width: 400px;
   padding: 10px;
   font-size: 40px;
-  color: #83A127;
+  color: #FC766AFF;
   font-style: italic;
   text-decoration: underline;
   text-underline-offset: 10px;
   text-align: center;
 }
-#project-section #project-div{
+#projects h1:hover{
+  cursor: default;
+  background: black;
+  border-radius: 30px;
+}
+#projects #project-div{
   margin-top: 40px;
   display: grid;
   gap: 30px 60px;
@@ -87,33 +104,122 @@ section{
 }
 .project-tile{
   height: fit-content;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 .project-link{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   text-decoration: none;
   border-radius: inherit;
 }
 .project-link img{
   border-radius: inherit;
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.705);
+}
+.project-link img:hover{
+  margin-bottom: 5px;
+  height: 345px;
+  width: 495px;
 }
 .project-title{
-  width: auto;
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 70%;
   height: 50px;
   text-align: center;
   background: #D37780;
   border-radius: inherit;
   color: black;
   font-size: 20px;
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.705);
+}
+.project-title:hover{
+  width: 68%;
+  height: 45px;
+  font-size: 19px;
+}
+.project-title:hover,
+.project-link img:hover,
+#all-projects-link:hover{
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.705);
+}
+#all-projects-link{
+  margin: 40px 0;
+  padding: 14px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgb(72, 36, 204);
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.705);
+}
+#all-projects-link:hover{
+  margin-bottom: 44px;
+  height: 46px;
+  width: 145px;
+  font-size: 19px;
+}
+
+#contact-section{
+  background: #CDB599FF;
+}
+#contact-section #contact-title,
+#contact-section p{
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#contact-section #contact-title{
+  font-size: 45px;
+}
+#contact-section p{
+  margin-top: 10px;
+  font-style: italic;
+}
+#contact-container{
+  display: flex;
+  height: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+#contact-container a{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#contact-container a:hover{
+  border-radius: 50%;
+  background: white;
+  border-radius: 5px 5px 5px rgba(0, 0, 0, 0.705);
+}
+#contact-container a img{
+  border-radius: 50%;
+  background: #CDB599FF;
 }
 
 
+
+
+
+
 @media screen and (max-width: 600px) {
-  #project-section h1{
+  #projects h1{
     max-width: none;
     width: fit-content;
     font-size: 25px;
   }
-  #project-section #project-div{
+  #projects #project-div{
     grid-template-columns: repeat(1, minmax(500px, 1fr));
   }
 }
